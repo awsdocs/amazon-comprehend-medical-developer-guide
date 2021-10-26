@@ -1,11 +1,12 @@
-## My Project
+## Amazon Comprehend Medical Developer Guide
 
-TODO: Fill this README out!
+Amazon Comprehend Medical detects and returns useful information in unstructured clinical text such as physicians notes, discharge summaries, test results, and case notes. Amazon Comprehend Medical uses natural language processing (NLP) models to detect entities, which are textual references to medical information such as medical conditions, medications, or Protected Health Information (PHI). 
 
-Be sure to:
+Markdown source: [docs-source](/docs-source)
 
-* Change the title in this README
-* Edit your repository description on GitHub
+Table of contents: [docs-source/index.md](/docs-source/index.md)
+
+API reference: [docs.aws.amazon.com/comprehend-medical/latest/api](https://docs.aws.amazon.com/comprehend-medical/latest/api/API_Operations.html)
 
 ## Security
 
