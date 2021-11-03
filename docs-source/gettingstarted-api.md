@@ -155,7 +155,7 @@ for entity in entities:
     print('Entity:', entity)
 ```
 
-The output contains the three entities found in the input text, their location in the input text\. A confidence level that the entity was correctly identified is also listed with each entity\. The following output shows the `Generic_Name`, `Dosage`, and `Frequency` entities from the preceding example\.
+The output contains the three entities found in the input text, their location in the input text\. A confidence level that the entity was correctly identified is also listed with each entity\. The following output shows the `Brand Name`, `Dosage`, and `Frequency` entities from the preceding example\.
 
 ```
 Entity: {
