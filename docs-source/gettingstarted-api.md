@@ -149,18 +149,49 @@ The following example uses the `DetectEntitiesV2` operation with Python\. To run
 ```
 import boto3
 client = boto3.client(service_name='comprehendmedical', region_name='YOUR REGION')
-result = client.detect_entities(Text= 'cerealx 84 mg daily')
+result = client.detect_entities_v2(Text= 'cerealx 84 mg daily')
 entities = result['Entities'];
 for entity in entities:
-    print('Entity', entity)
+    print('Entity:', entity)
 ```
 
 The output contains the three entities found in the input text, their location in the input text\. A confidence level that the entity was correctly identified is also listed with each entity\. The following output shows the `Generic_Name`, `Dosage`, and `Frequency` entities from the preceding example\.
 
 ```
-('Entity', {u'Category': u'MEDICATION', u'BeginOffset': 0, u'EndOffset': 7, 
-            u'Text': u'cerealx', u'Traits': [], u'Score': 0.8877691626548767, u'Attributes': [{u'BeginOffset': 8, u'EndOffset': 13, 
-            u'Text': u'84 mg', u'Traits': [], u'Score': 0.9337134957313538, u'Type': u'DOSAGE', u'Id': 1, u'RelationshipScore': 0.9995118379592896}, 
-            {u'BeginOffset': 14, u'EndOffset': 19, u'Text': u'daily', u'Traits': [], u'Score': 0.990627646446228, u'Type': u'FREQUENCY', 
-            u'Id': 2, u'RelationshipScore': 0.9987651109695435}], u'Type': u'BRAND_NAME', u'Id': 0})
+Entity: {
+    'Attributes': [
+        {
+            'BeginOffset': 8,
+            'Category': 'MEDICATION',
+            'EndOffset': 13,
+            'Id': 2,
+            'RelationshipScore': 0.9995119571685791,
+            'RelationshipType': 'DOSAGE',
+            'Score': 0.9337134957313538,
+            'Text': '84 mg',
+            'Traits': [],
+            'Type': 'DOSAGE'
+        },
+        {
+            'BeginOffset': 14,
+            'Category': 'MEDICATION',
+            'EndOffset': 19,
+            'Id': 3,
+            'RelationshipScore': 0.998765230178833,
+            'RelationshipType': 'FREQUENCY',
+            'Score': 0.990627646446228,
+            'Text': 'daily',
+            'Traits': [],
+            'Type': 'FREQUENCY'
+        }
+    ],
+    'BeginOffset': 0,
+    'Category': 'MEDICATION',
+    'EndOffset': 7,
+    'Id': 1,
+    'Score': 0.8877692222595215,
+    'Text': 'cerealx',
+    'Traits': [],
+    'Type': 'BRAND_NAME'
+}
 ```
