@@ -1,12 +1,12 @@
 # Ontology linking batch analysis<a name="ontologies-batchapi"></a>
 
-Use Amazon Comprehend Medical to detect entities in clinical text stored in an Amazon Simple Storage Service \(Amazon S3\) bucket and to link those entities to standardized ontologies\. You can use ontology linking batch analysis to analyze either a collection of documents or a single document with up to 20,000 characters\. By using either the console or the `InferRxNorm` and `InferIC10CM` ontology linking batch APIs, you can perform operations to start, stop, list, and describe ongoing batch analysis jobs\.
+Use Amazon Comprehend Medical to detect entities in clinical text stored in an Amazon Simple Storage Service \(Amazon S3\) bucket and to link those entities to standardized ontologies\. You can use ontology linking batch analysis to analyze either a collection of documents or a single document with up to 20,000 characters\. By using either the console or the **InferRxNorm** and **InferICD10CM** ontology linking batch APIs, you can perform operations to start, stop, list, and describe ongoing batch analysis jobs\.
 
  For pricing information for batch analysis and other Amazon Comprehend Medical operations, see [Amazon Comprehend Medical Pricing](https://aws.amazon.com/comprehend/pricing/)\.
 
 ## Important notice<a name="important-notice"></a>
 
-Amazon Comprehend Medical ontology linking batch analysis operations are not intended as a substitute for professional medical advice, diagnosis, or treatment\. Identify the right confidence threshold for your use case\. In situations that require great accuracy, use high confidence thresholds\. Use all Amazon Comprehend Medical operations in patient care scenarios only after the results have been reviewed for accuracy and sound medical judgment by trained medical professionals\.
+Amazon Comprehend Medical ontology linking batch analysis operations are not intended as a substitute for professional medical advice, diagnosis, or treatment\. Use all Amazon Comprehend Medical operations in patient care scenarios only after the results have been reviewed for accuracy and sound medical judgment by trained medical professionals\.
 
 ## Performing batch analysis<a name="performing-batch-analysis-ontology-linking"></a>
 
@@ -18,17 +18,15 @@ You can run a batch analysis job using either the Amazon Comprehend Medical cons
 
  When you are using the Amazon Comprehend Medical API, create an AWS Identity Access and Management \(IAM\) policy and attach it to an IAM role\. To learn more about IAM roles and trust policies, see [IAM Policies and Permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)\. 
 
-****
-
 1. Upload your data into an S3 bucket\.
 
-1. To start a new analysis job, use either the or the operation\. Provide the name of the S3 bucket that contains the input files and the name of the S3 bucket where you want to send the output files\.
+1. To start a new analysis job, use either the **StartICD10CMInferenceJob**, **StartSNOMEDCTInferenceJob**, or the **StartRxNormInferenceJob** operations\. Provide the name of the Amazon S3 bucket that contains the input files and the name of the Amazon S3 bucket where you want to send the output files\.
 
-1. Monitor the progress of the job by using or operations\. Additionally, and enable you to see the status of all ontology linking batch analysis jobs\.
+1. Monitor the progress of the job by using **DescribeICD10CMInferenceJob**, **DescribeSNOMEDCTInferenceJob**, or **DescribeRxNormInferenceJob** operations\. Additionally, **ListICD10CMInferenceJobs**, **ListSNOMEDCTInferenceJobs**, and **ListRxNormInferenceJobs** enable you to see the status of all ontology linking batch analysis jobs\.
 
-1. If you need to stop a job in progress, use or to stop analysis\.
+1. If you need to stop a job in progress, use **StopICD10CMInferenceJob**, **StopSNOMEDCTInferenceJob**, or **StopRxNormInferenceJob** to stop analysis\.
 
-1. To view the results of your analysis job, see the output S3 bucket that you configured when you started the job\.
+1. To view the results of your analysis job, see the output Amazon S3 bucket that you configured when you started the job\.
 
 ### Performing batch analysis using the console<a name="batch-api-ontology-linking-console"></a>
 
@@ -124,7 +122,7 @@ The following is the JSON structure of the batch manifest file\.
 {
   "Summary" : {
     "Status" : "COMPLETED | FAILED | PARTIAL_SUCCESS | STOPPED",
-    "JobType" : "ICD10CMInferenceJob | RxNormInferenceJob",
+    "JobType" : "ICD10CMInferenceJob | RxNormInferenceJob | SNOMEDCTInferenceJob",
     "InputDataConfiguration" : {
       "Bucket" : "input bucket",
       "Path" : "path to files/account ID-job type-job ID"

@@ -1,6 +1,6 @@
-# Detect Entities \(Version 2\)<a name="textanalysis-entitiesv2"></a>
+# Detect entities \(Version 2\)<a name="textanalysis-entitiesv2"></a>
 
-Use the to detect entities in single files or for batch analysis on multiple files\. You can detect entities in the following categories:
+Use the **DetectEntitiesV2** to detect entities in single files or **StartEntitiesDetectionV2Job** for batch analysis on multiple files\. You can detect entities in the following categories:
 + `ANATOMY:` Detects references to the parts of the body or body systems and the locations of those parts or systems\.
 + `MEDICAL_CONDITION:` Detects the signs, symptoms, and diagnosis of medical conditions\.
 + `MEDICATION:` Detects medication and dosage information for the patient\.
@@ -8,7 +8,7 @@ Use the to detect entities in single files or for batch analysis on multiple fil
 + `TEST_TREATMENT_PROCEDURE:` Detects the procedures that are used to determine a medical condition\.
 + `TIME_EXPRESSION:` Detects entities related to time when they are associated with a detected entity\. 
 
-All six categories are detected by the `DetectEntitiesV2` operation\. For analysis specific to detecting PHI, use on single files and for batch analysis\. 
+All six categories are detected by the **DetectEntitiesV2** operation\. For analysis specific to detecting PHI, use **DetectPHI** on single files and **StartPHIDetectionJob** for batch analysis\. 
 
 **Important**  
 Amazon Comprehend Medical provides confidence scores that indicate the level of confidence in the accuracy of detected entities\. When you are identifying protected health information \(PHI\), evaluate these scores and identify the right confidence threshold for your use case\. Use high\-confidence thresholds in situations that require high accuracy\. For certain use cases, results should be reviewed and verified by appropriately trained human reviewers\. Use Amazon Comprehend Medical in patient care scenarios only after review by trained medical professionals for accuracy and exercising medical judgment\.

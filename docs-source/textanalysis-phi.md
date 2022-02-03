@@ -1,6 +1,6 @@
 # Detect PHI<a name="textanalysis-phi"></a>
 
-Use the operation to detect Protected Health Information \(PHI\) data in the clinical text being examined\. All five categories of entity are detected using the operation, but only information in the PHI category is detected by the **DetectPHI** operation\. This allows for use cases where only this specific information is required\. For information about information in the non\-PHI categories, see [Detect entities](textanalysis-entities.md)\.
+Use the **DetectPHI** operation to detect Protected Health Information \(PHI\) data in the clinical text being examined\. All five categories of entity are detected using the **DetectEntities** operation, but only information in the PHI category is detected by the **DetectPHI** operation\. This allows for use cases where only this specific information is required\. For information about information in the non\-PHI categories, see [Detect entities](textanalysis-entities.md)\.
 
 **Important**  
  Amazon Comprehend Medical provides confidence scores that indicate the level of confidence in the accuracy of the detected entities\. Evaluate these confidence scores and identify the right confidence threshold for your use case\. For specific compliance use cases, we recommend that you use additional human review or other methods to confirm the accuracy of detected PHI\.   
@@ -10,7 +10,7 @@ Under the HIPAA act, PHI that is based on a list of 18 identifiers must be treat
 
 Each PHI\-related entity includes a score \(`Score` in the response\) that indicates the level of confidence Amazon Comprehend Medical has in the accuracy of the detection\. Identify the right confidence threshold for your use case and filter out entities that do not meet it\. When identifying occurrences of PHI, it may be better to use a low confidence threshold for filtering to capture more potential detected entities\. This is especially true when not using the values of the detected entities in compliance use cases\.
 
-The following PHI\-related entities can be detected by and operations:
+The following PHI\-related entities can be detected by **DetectPHI** and **DetectEntities** operations:
 
 
 **Detected PHI Entities**  
@@ -42,7 +42,7 @@ In the Amazon Comprehend Medical console, this is shown like this:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/comprehend-medical/latest/dev/images/patient.png)
 
-When using the operation, the response appears like this\. When you use the operation, Amazon Comprehend Medical creates a file in the output location with this structure\.
+When using the **DetectPHI** operation, the response appears like this\. When you use the **StartPHIDetectionJob** operation, Amazon Comprehend Medical creates a file in the output location with this structure\.
 
 ```
 {

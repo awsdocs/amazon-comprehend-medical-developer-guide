@@ -1,3 +1,3 @@
 # Ontology linking<a name="comprehendmedical-ontologies"></a>
 
-Amazon Comprehend Medical enables you to detect entities in clinical text and link those entities to concepts in standardized medical ontologies, including the RxNorm and ICD\-10\-CM knowledge bases\. Analysis can be performed both on single files or as a batch analysis on large documents or multiple files stored in an Amazon S3 bucket\.
+Amazon Comprehend Medical enables you to detect entities in clinical text and link those entities to concepts in standardized medical ontologies, including the RxNorm, ICD\-10\-CM, and SNOMED CT knowledge bases\. Analysis can be performed both on single files or as a batch analysis on large documents or multiple files stored in an Amazon S3 bucket\.

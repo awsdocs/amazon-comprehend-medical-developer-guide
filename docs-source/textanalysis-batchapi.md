@@ -20,11 +20,11 @@ You can run a batch analysis job using either the Amazon Comprehend Medical cons
 
 1. Upload your data into an S3 bucket\.
 
-1. To start a new analysis job, use either the operation or the operation\. When you start the job, tell Amazon Comprehend Medical the name of the input S3 bucket that contains the input files and designate the output S3 bucket to write the files after batch analysis\.
+1. To start a new analysis job, use either the StartEntitiesDetectionV2Job operation or the StartPHIDetectionJob operation\. When you start the job, tell Amazon Comprehend Medical the name of the input S3 bucket that contains the input files and designate the output S3 bucket to write the files after batch analysis\.
 
-1. Monitor the progress of the job by using the console or the operation or the operation\. Additionally, and enable you to see the status of all ontology linking batch analysis jobs\.
+1. Monitor the progress of the job by using the console or the DescribeEntitiesDetectionV2Job operation or the DescribePHIDetectionJob operation\. Additionally, ListEntitiesDetectionV2Jobs and ListPHIDetectionJobs enable you to see the status of all ontology linking batch analysis jobs\.
 
-1. If you need to stop a job in progress, use or to stop analysis\.
+1. If you need to stop a job in progress, use StopEntitiesDetectionV2Job or StopPHIDetectionJob to stop analysis\.
 
 1. To view the results of your analysis job, see the output S3 bucket that you configured when you started the job\.
 

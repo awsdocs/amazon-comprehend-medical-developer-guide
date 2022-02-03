@@ -23,10 +23,14 @@ Character encoding for Amazon Comprehend Medical is in UTF\-8\. Amazon Comprehen
 | --- | --- | 
 | Transactions per second \(TPS\) for the DetectEntities\-v2, DetectEntities, DetectPHI, InferRxNorm, and InferICD10CM operations  | 100 | 
 | Characters per second \(CPS\) for the DetectEntities\-v2, DetectEntities, DetectPHI, InferRxNorm, and InferICD10CM operations  | 40,000 | 
+| Transactions per second \(TPS\) for the InferSNOMEDCT  | 2 | 
+| Characters per second \(CPS\) for the InferSNOMEDCT  | 5000 | 
 | Transactions per second \(TPS\) for the StartEntitiesDetectionV2Job, StartPHIDetectionJob, StopEntitiesDetectionV2Job, StopPHIDetectionJob, StartICD10CMInferenceJob, StartRxNormInferenceJob, StopICD10CMInferenceJob, and StopRxNormInferenceJob operations  | 5 | 
+| Transactions per second \(TPS\) for the StartSNOMEDCTnferenceJob and StopSNOMEDCTnferenceJob  | 5 | 
 | Transactions per second \(TPS\) for the ListEntitiesDetectionV2Jobs, ListPHIDetectionJobs, DescribeEntitiesDetectionV2Job, DescribePHIDetectionJob, ListICD10CMInferenceJobs, ListRxNormInferenceJobs, DescribeICD10CMInferenceJob, and DescribeRxNormInferenceJob operations  | 10 | 
+| Transactions per second \(TPS\) for the ListSNOMEDCTnferenceJobs and DescribeSNOMEDCTnferenceJob | 10 | 
 
-The size quotas for files as is shown in the table below:
+The size quotas for files is as shown in the table below:
 
 
 | Description | Quota | 

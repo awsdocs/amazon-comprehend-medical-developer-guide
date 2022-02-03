@@ -27,11 +27,16 @@ Use the scroll bars to see the rest of the table\.
 | StopPHIDetectionJob | comprehendmedical:StopPHIDetectionJob | \* | 
 | InferICD10CM | comprehendmedical:InferICD10CM | \* | 
 | InferRxNorm | comprehendmedical:InferRxNorm | \* | 
+| InferSNOMEDCT | comprehendmedical:InferSNOMEDCT | \* | 
 | StartICD10CMInferenceJob | comprehendmedical:StartICD10CMInferenceJob | \* | 
 | StartRxNormInferenceJob | comprehendmedical:StartRxNormInferenceJob | \* | 
+| StartSNOMEDCTInferenceJob | comprehendmedical:StartSNOMEDCTInferenceJob | \* | 
 | ListICD10CMInferenceJobs | comprehendmedical:ListICD10CMInferenceJobs | \* | 
 | ListRxNormInferenceJobs | comprehendmedical:ListRxNormInferenceJobs | \* | 
+| ListSNOMEDCTInferenceJobs | comprehendmedical:ListSNOMEDCTInferenceJobs | \* | 
 | StopICD10CMInferenceJob | comprehendmedical:StopICD10CMInferenceJob | \* | 
 | StopRxNormInferenceJob | comprehendmedical:StopRxNormInferenceJob | \* | 
+| StopSNOMEDCTInferenceJob | comprehendmedical:StopSNOMEDCTInferenceJob | \* | 
 | DescribeICD10CMInferenceJob | comprehendmedical:DescribeICD10CMInferenceJob | \* | 
 | DescribeRxNormInferenceJob | comprehendmedical:DescribeRxNormInferenceJob | \* | 
+| DescribeSNOMEDCTInferenceJob | comprehendmedical:DescribeSNOMEDCTInferenceJob | \* | 

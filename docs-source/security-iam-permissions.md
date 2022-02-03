@@ -38,8 +38,14 @@ This example policy is required to use the Amazon Comprehend Medical document an
                 "comprehendmedical:DescribeICD10CMInferenceJob",
                 "comprehendmedical:StopICD10CMInferenceJob",
                 
+                "comprehendmedical:StartSNOMEDCTInferenceJob",
+                "comprehendmedical:ListSNOMEDCTInferenceJobs",
+                "comprehendmedical:DescribeSNOMEDCTInferenceJob",
+                "comprehendmedical:StopSNOMEDCTInferenceJob",
+                
                 "comprehendmedical:InferRxNorm",
                 "comprehendmedical:InferICD10CM",
+                "comprehendmedical:InferSNOMEDCT",
 
              ],   
       "Resource": "*"

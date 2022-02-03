@@ -56,7 +56,7 @@ The following example shows how the `InferICD10CM` operation works\. The followi
 
  "The patient is a 71\-year\-old female patient of Dr\. X\. The patient presented to the emergency room last evening with approximately 7\- to 8\-day history of abdominal pain which has been persistent\. She has had no nausea and vomiting, but has had persistent associated anorexia\. She is passing flatus, but had some obstipation symptoms with the last bowel movement two days ago\. She denies any bright red blood per rectum and no history of recent melena\. Her last colonoscopy was approximately 5 years ago with Dr\. Y\. She has had no definite fevers or chills and no history of jaundice\. The patient denies any significant recent weight loss\." 
 
-For the input text, the `InferICD10CM` operation returns the following output \(abbreviated for brevity\)\. 
+For the input text, the **InferICD10CM** operation returns the following output \(abbreviated for brevity\)\. 
 
 ```
 {
@@ -120,7 +120,7 @@ For the input text, the `InferICD10CM` operation returns the following output \(
 }
 ```
 
-I`nferICD10CM` also recognizes when an entity is negated in text\. For instance, if a patient is not experiencing a symptom, both the symptom and negation are identified as traits and listed with a confidence score\. Based on the input for the previous example, the symptom `Nausea` would be listed under `NEGATION` because the patient isn't experiencing nausea\. 
+**InferICD10CM** also recognizes when an entity is negated in text\. For instance, if a patient is not experiencing a symptom, both the symptom and negation are identified as traits and listed with a confidence score\. Based on the input for the previous example, the symptom `Nausea` would be listed under `NEGATION` because the patient isn't experiencing nausea\. 
 
 ```
     {

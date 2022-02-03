@@ -1,9 +1,9 @@
 # Detect entities<a name="textanalysis-entities"></a>
 
 **Note**  
-This version of the `DetectEntities` operation should not be used for new applications\. You should use version 2 of the operation instead\. All new iterations and enhancements of features will be specific to Detect Entities Version 2\. For more information, see [Detect Entities \(Version 2\)](textanalysis-entitiesv2.md)\.
+This version of the **DetectEntities** operation should not be used for new applications\. You should use version 2 of the operation instead\. All new iterations and enhancements of features will be specific to Detect Entities Version 2\. For more information, see [Detect entities \(Version 2\)](textanalysis-entitiesv2.md)\.
 
-Use the operation to detect the medical entities in your text\. It detects entities in the following categories:
+Use the **DetectEntities** operation to detect the medical entities in your text\. It detects entities in the following categories:
 + `ANATOMY`
 + `MEDICAL_CONDITION`
 + `MEDICATION`
