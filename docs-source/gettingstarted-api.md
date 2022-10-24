@@ -149,7 +149,7 @@ The following example uses the `DetectEntitiesV2` operation with Python\. To run
 ```
 import boto3
 client = boto3.client(service_name='comprehendmedical', region_name='YOUR REGION')
-result = client.detect_entities(Text= 'cerealx 84 mg daily')
+result = client.detect_entities_v2(Text= 'cerealx 84 mg daily')
 entities = result['Entities'];
 for entity in entities:
     print('Entity', entity)
