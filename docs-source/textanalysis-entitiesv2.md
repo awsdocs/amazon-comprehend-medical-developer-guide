@@ -2,6 +2,7 @@
 
 Use the **DetectEntitiesV2** to detect entities in single files or **StartEntitiesDetectionV2Job** for batch analysis on multiple files\. You can detect entities in the following categories:
 + `ANATOMY:` Detects references to the parts of the body or body systems and the locations of those parts or systems\.
++ `BEHAVIORAL_ENVIRONMENTAL_SOCIAL`: Detects the behaviors and conditions in the environment that impact a person's health. This includes tobacco usage, alcohol consumption, recreational drug usage, allergies, gender, and race/ethnicity\.
 + `MEDICAL_CONDITION:` Detects the signs, symptoms, and diagnosis of medical conditions\.
 + `MEDICATION:` Detects medication and dosage information for the patient\.
 + `PROTECTED_HEALTH_INFORMATION:` Detects the patient's personal information\.
@@ -34,6 +35,23 @@ The `ANATOMY` category detects references to the parts of the body or body syste
 
 ### Attributes<a name="anatomy-attribute-v2"></a>
 + `DIRECTION`: Directional terms\. For example, left, right medial, lateral, upper, lower, posterior, anterior, distal, proximal, contralateral, bilateral, ipsilateral, dorsal, ventral, and so on\.
+
+## Behavioral, environmental, and social health category
+The `BEHAVIORAL_ENVIRONMENTAL_SOCIAL` category detects references to behaviors and conditions in the environment that impact a person's health.
+
+### Type
++ `ALCOHOL_CONSUMPTION`: Defines the patient’s alcohol consumption in terms of use status, frequency, amount, and duration\.
++ `ALLERGIES`: Defines the patient’s allergies and responses to allergens\.
++ `GENDER`: An identification of the characteristics of gender identity\.
++ `RACE_ETHNICITY`: A social-political construct of a patient’s identification with particular racial and ethnic groups\.
++ `REC_DRUG_USE`: Defines the patient’s use of recreational drugs in terms of use status, frequency, amount, and duration\.
++ `TOBACCO_USE`: Defines the patient’s tobacco usage in terms of use status, frequency, amount, and duration\.
+
+The following detected attributes only apply to the types `ALCOHOL_CONSUMPTION`, `TOBACCO_USE`, and `REC_DRUG_USE`:
+
++ `AMOUNT`: The amount of alcohol, tobacco, or recreational drug used\.
++ `DURATION`: How long the alcohol, tobacco, or recreational drug has been used\.
++ `FREQUENCY`: How often the alcohol, tobacco, or recreational drug is used\.
 
 ## Medical condition category<a name="medical-condition-v2"></a>
 
